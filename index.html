@@ -11,8 +11,8 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
 
-  <title>Sepr-eep.GitHub.io</title>
-  <meta name="description" content="">
+  <title>EEP Team, SEPR Module, Dept. of CS, University of York</title>
+  <meta name="description" content="Webpage of the TAxE Game developed by the EEP Team at the University of York.">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -22,15 +22,20 @@
 
   <div class="wrapper">
     <header>
-      <h1 class="title">Sepr-eep.GitHub.io</h1>
+      <h1 class="title">EEP Team Website</h1>
     </header>
     <div id="container">
-      <p class="tagline"></p>
+      <p class="tagline" style="text-align: center;">
+        Software Engineering Project module<br />
+        <small>Department of Computer Science at the University of York</small>
+      </p>
       <div id="main" role="main">
         <div class="download-bar">
         <div class="inner">
-          <a href="https://github.com/SEPR-EEP" class="code">View Sepr-eep.GitHub.io on GitHub</a>
+          <a href="https://github.com/SEPR-EEP" class="code">View the Team Profile on GitHub</a>
         </div>
+          <a href="https://github.com/SEPR-EEP/taxe-game">View the Game Client repository</a> or 
+          <a href="https://github.com/SEPR-EEP/taxe-game">View the Game Client repository</a>
         <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
@@ -44,16 +49,19 @@
 <h2>
 <a id="run-the-game" class="anchor" href="#run-the-game" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run the game</h2>
 
-<p>You can run the Game on virtually any PC with the Java Runtime Environment version 8 or higher. You can download the JRE for free at <a href="http://java.com">java.com</a>. The game has been tested to work on the Windows and Linux PCs at the Department of Computer Science, University of York.</p>
+<p>You can run the Game on virtually any PC with the Java Runtime Environment version 7 or higher. You can download the JRE for free at <a href="http://java.com">java.com</a>. The game has been tested to work on the Windows and Linux PCs at the Department of Computer Science, University of York.</p>
 
 <ol>
-<li>Download <a href="https://raw.githubusercontent.com/SEPR-EEP/taxe-game/master/taxe-game.jar">taxe-game.jar</a> and open it;</li>
+<li><strong>Download <a href="https://raw.githubusercontent.com/SEPR-EEP/taxe-game/master/taxe-game.jar">taxe-game.jar</a> and open it;</strong></li>
 <li>If a security prompt is shown, click "Allow" - we're trustworthy;</li>
 <li>Click OK to choose default game server and run the game;</li>
 <li>Play!</li>
 </ol>
 
-<p><strong>Important</strong>. If you are running the game on Linux, make sure you use Oracle's JRE and not the OpenJDK Runtime Environment, that sometimes comes with your distribution.</p>
+<br />
+<img src="images/screenshot1.png" alt="A Screenshot from the Game" title="A Screenshot from the Game" />
+
+<hr />
 
 <h3>
 <a id="host-your-own-server" class="anchor" href="#host-your-own-server" aria-hidden="true"><span class="octicon octicon-link"></span></a>Host your own server</h3>
@@ -64,16 +72,75 @@
 
 <p>To run the server, type in a terminal:</p>
 
-<div class="highlight highlight-bash"><pre>git clone https://github.com/SEPR-EEP/taxe-server
-<span class="pl-s3">cd</span> taxe-server
-node server.js</pre></div>
+<div class="highlight highlight-bash"><pre> git clone https://github.com/SEPR-EEP/taxe-server
+ <span class="pl-s3">cd</span> taxe-server
+ node server.js</pre></div>
 
 <p>This will start a game server listening on port <code>8042</code>. Make sure this port is reachable from the Internet. You can then type <code>http://&lt;your-ip&gt;:8042</code> to connect to your server when starting the Game.</p>
 
 <p><strong>Note</strong>: In some Linux distributions such as Ubuntu and its derivatives, you may need to type <code>nodejs</code> instead of <code>node</code>.</p>
 
+<hr />
+
+<h2>See also</h2>
+  
+<ul>
+  <li><strong>
+    <a target="_new" href="/api/">API Reference</a>
+  </strong></li>
+  <li><strong>
+    <a target="_new" href="/usermanual">User Manual</a>
+  </strong></li>
+  <li><strong>
+    <a target="_new" href="https://github.com/sepr-eep/taxe-game">Game Repository</a>
+  </strong></li>
+  <li><strong>
+    <a target="_new" href="https://github.com/sepr-eep/taxe-server">Game Server Repository</a>
+  </strong></li>
+</ul>
+
+<hr />
+
+<h2>Features of the Game</h2>
+<ul>
+  <li>
+    <strong>Network architecture</strong> &mdash;
+    The game clients exchange game data using a Server. This allows users to play over the Internet;
+  </li>
+  <li>
+    <strong>Easy to extend</strong> &mdash;
+    The Server is very simple and independent from the Game models - its only role is to exchange objects between the clients, plus the simple lobby sistem.
+    All of the Game logic is implemented in the Game Clients in Java, so there's no need to touch the server code if you extend the Game;
+  </li>
+  <li>
+    <strong>MVC Pattern</strong> &mdash;
+    The Model-View-Controller architectural pattern separates the User Interface (the View), the Models and the Controller (catching events and implementing
+    actions). This allows team members to easily work on different aspect of the same code;
+  </li>
+  <li>
+    <strong>Well documented</strong> &mdash;
+    The Game code is written in such a way to be read and understood very easily, as well as extensively commented. <a target="_new" href="https://github.com/SEPR-EEP/taxe-game/blob/master/src/com/eep/taxe/mvc/menu/MenuController.java">See for yourself</a>;
+  </li>  
+  <li>
+    <strong>API Reference</strong> &mdash;
+    The use of Javadoc-style comments allows the generation of a very clear Reference for all of the Classes and Methods. <a href="/api/" target="_new">Give a look at our beautiful API reference</a>.
+  </li>
+</ul>
 <h2>
+
+<hr />
+
 <a id="authors" class="anchor" href="#authors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors</h2>
+
+<ul>
+  <li><strong>Cosgrove, Richard</strong> (rc1035@york.ac.uk);</li>
+  <li><strong>Dong, Yindi</strong> (yd695@york.ac.uk);</li>
+  <li><strong>Fresta, Alfio Emanuele</strong> (aef517@york.ac.uk);</li>
+  <li><strong>Grierson, Andy</strong> (ag1106@york.ac.uk);</li>
+  <li><strong>Kokov, Stefan</strong> (sk1056@york.ac.uk);</li>
+  <li><strong>Lippit, Peter</strong> (pjl513@york.ac.uk).</li>
+</ul>
+
         </article>
       </div>
     </div>
@@ -83,9 +150,7 @@ node server.js</pre></div>
       <p><a href="https://github.com/SEPR-EEP" class="avatar"><img src="https://avatars3.githubusercontent.com/u/9052345?v=3&amp;s=60" width="48" height="48"></a>View <a href="https://github.com/SEPR-EEP">SEPR-EEP</a> on <a href="https://www.github.com">GitHub</a></p>
 
       </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
+
     </footer>
   </div>
   <div class="current-section">
@@ -94,6 +159,18 @@ node server.js</pre></div>
     <p class="name"></p>
   </div>
 
-  
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58735174-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+</script>  
 </body>
+
 </html>
