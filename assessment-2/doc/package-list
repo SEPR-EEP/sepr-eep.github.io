@@ -1,0 +1,14 @@
+com.TeamHEC.LocomotionCommotion
+com.TeamHEC.LocomotionCommotion.Card
+com.TeamHEC.LocomotionCommotion.Game
+com.TeamHEC.LocomotionCommotion.Goal
+com.TeamHEC.LocomotionCommotion.Goal.Graph
+com.TeamHEC.LocomotionCommotion.Map
+com.TeamHEC.LocomotionCommotion.MapActors
+com.TeamHEC.LocomotionCommotion.Mocking
+com.TeamHEC.LocomotionCommotion.Player
+com.TeamHEC.LocomotionCommotion.Resource
+com.TeamHEC.LocomotionCommotion.Scene
+com.TeamHEC.LocomotionCommotion.Train
+com.TeamHEC.LocomotionCommotion.UI_Elements
+com.TeamHEC.LocomotionCommotion.desktop

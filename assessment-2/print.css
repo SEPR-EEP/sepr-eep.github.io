@@ -1,0 +1,29 @@
+body, html{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.main{
+    width: auto;
+    line-height: 120%;
+}
+
+nav{
+    display: none;
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+a{
+    color: #00BCD4;
+}
+a:link:after, a:visited:after { content:" [" attr(href) "] "; }
+
+h3 a{
+    display: none;
+}
