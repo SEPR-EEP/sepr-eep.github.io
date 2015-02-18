@@ -6,6 +6,7 @@ com.TeamHEC.LocomotionCommotion.Goal.Graph
 com.TeamHEC.LocomotionCommotion.Map
 com.TeamHEC.LocomotionCommotion.MapActors
 com.TeamHEC.LocomotionCommotion.Mocking
+com.TeamHEC.LocomotionCommotion.Obstacle
 com.TeamHEC.LocomotionCommotion.Player
 com.TeamHEC.LocomotionCommotion.Resource
 com.TeamHEC.LocomotionCommotion.Scene
